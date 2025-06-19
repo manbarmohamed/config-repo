@@ -5,8 +5,7 @@ server:
 spring:
   application:
     name: config-repo
-  profiles:
-    active: native
+
 
 eureka:
   client:
