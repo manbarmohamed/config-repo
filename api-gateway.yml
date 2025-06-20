@@ -8,7 +8,7 @@ spring:
 
       routes:
         - id: category-service
-          uri: lb://CATEGORY-SERVICE
+          uri: lb://category-service
           predicates:
             - Path=/api/v1/category/**
         - id: product-service
