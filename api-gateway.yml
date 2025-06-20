@@ -3,24 +3,17 @@ server:
 spring:
   application:
     name: api-gateway
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    gateway:
-      enabled: true
-  cloud:
-    gateway:
-      routes:
-        - id: CATEGORY-SERVICE
-          uri: http://localhost:8081 # Hardcode category service address
-          predicates:
-            - Path=/api/v1/category/**
-          filters:
-            - StripPrefix=3
-logging:
-  level:
-    org.springframework.cloud.gateway: TRACE
-    reactor.netty: DEBUG
+
+  spring:
+    cloud:
+      gateway:
+        discovery:
+          locator:
+            enabled: false
+        routes:
+          - id: CATEGORY-SERVICE
+            uri: lb://CATEGORY-SERVICE
+            predicates:
+              - Path=/api/v1/category/**
+            filters:
+              - StripPrefix=3
