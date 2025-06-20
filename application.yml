@@ -1,13 +1,13 @@
 # config-repo/application.yml
-server:
-  port: 0
-
-spring:
-  application:
-    name: config-repo
-
-
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+#server:
+#  port: 0
+#
+#spring:
+#  application:
+#    name: config-repo
+#
+#
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
