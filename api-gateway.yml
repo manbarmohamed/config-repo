@@ -8,7 +8,7 @@ spring:
 
       routes:
         - id: category-service
-          uri: localhost:8001/
+          uri: localhost:8001
           predicates:
             - Path=/api/v1/category/**
         - id: product-service
