@@ -4,6 +4,13 @@ spring:
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true
+        default-filters:
+            - StripPrefix=1
+            - RewritePath=/api/v1/(?<segment>.*), /${segment}
+            - SetPath=/api/v1/${segment}
+
+
       routes:
         - id: category-service
           uri: lb://category-service
