@@ -1,6 +1,5 @@
-app:
-  name: "category Service"
-  message: "Welcome to CategoryService!"
+server:
+  port: 8081
 
 spring:
   datasource:
