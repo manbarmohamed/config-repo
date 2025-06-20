@@ -3,12 +3,12 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: false
-          lower-case-service-id: true
+          enabled: true
+          #lower-case-service-id: true
 
       routes:
-        - id: category-service
-          uri: http://localhost:8001
+        - id: CATEGORY-SERVICE
+          uri: lb:http://CATEGORY-SERVICE
           predicates:
             - Path=/api/v1/category/**
         - id: product-service
