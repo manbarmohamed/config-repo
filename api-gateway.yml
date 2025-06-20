@@ -3,42 +3,42 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: false
           lower-case-service-id: true
 
-#      routes:
-#        - id: category-service
-#          uri: lb://category-service
-#          predicates:
-#            - Path=/api/v1/category/**
-#        - id: product-service
-#          uri: lb://product-service
-#          predicates:
-#            - Path=/api/v1/product/**
-#        - id: store-service
-#          uri: lb://store-service
-#          predicates:
-#            - Path=/api/v1/store/**
-#        - id: user-service
-#          uri: lb://user-service
-#          predicates:
-#            - Path=/api/v1/user/**
-#        - id: report-service
-#          uri: lb://report-service
-#          predicates:
-#            - Path=/api/v1/report/**
-#        - id: cart-service
-#          uri: lb://cart-service
-#          predicates:
-#            - Path=/api/v1/cart/**
-#        - id: payment-service
-#          uri: lb://payment-service
-#          predicates:
-#            - Path=/api/v1/payment/**
-#        - id: facturation-service
-#          uri: lb://facturation-service
-#          predicates:
-#            - Path=/api/v1/facturation/**
+      routes:
+        - id: category-service
+          uri: lb://category-service
+          predicates:
+            - Path=/api/v1/category/**
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/api/v1/product/**
+        - id: store-service
+          uri: lb://store-service
+          predicates:
+            - Path=/api/v1/store/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/v1/user/**
+        - id: report-service
+          uri: lb://report-service
+          predicates:
+            - Path=/api/v1/report/**
+        - id: cart-service
+          uri: lb://cart-service
+          predicates:
+            - Path=/api/v1/cart/**
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/api/v1/payment/**
+        - id: facturation-service
+          uri: lb://facturation-service
+          predicates:
+            - Path=/api/v1/facturation/**
 
 eureka:
   client:
